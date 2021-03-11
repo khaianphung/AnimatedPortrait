@@ -1,0 +1,7 @@
+C:\Users\khaia\source\repos\AnimatedPortrait\AnimatedPortrait\bin\Debug\AnimatedPortrait.dll
+C:\Users\khaia\source\repos\AnimatedPortrait\AnimatedPortrait\bin\Debug\AnimatedPortrait.pdb
+C:\Users\khaia\source\repos\AnimatedPortrait\AnimatedPortrait\obj\Debug\AnimatedPortrait.Form1.resources
+C:\Users\khaia\source\repos\AnimatedPortrait\AnimatedPortrait\obj\Debug\AnimatedPortrait.csproj.GenerateResource.cache
+C:\Users\khaia\source\repos\AnimatedPortrait\AnimatedPortrait\obj\Debug\AnimatedPortrait.csproj.CoreCompileInputs.cache
+C:\Users\khaia\source\repos\AnimatedPortrait\AnimatedPortrait\obj\Debug\AnimatedPortrait.dll
+C:\Users\khaia\source\repos\AnimatedPortrait\AnimatedPortrait\obj\Debug\AnimatedPortrait.pdb
