@@ -5,3 +5,4 @@ C:\Users\khaia\source\repos\AnimatedPortrait\AnimatedPortrait\obj\Debug\Animated
 C:\Users\khaia\source\repos\AnimatedPortrait\AnimatedPortrait\obj\Debug\AnimatedPortrait.csproj.CoreCompileInputs.cache
 C:\Users\khaia\source\repos\AnimatedPortrait\AnimatedPortrait\obj\Debug\AnimatedPortrait.dll
 C:\Users\khaia\source\repos\AnimatedPortrait\AnimatedPortrait\obj\Debug\AnimatedPortrait.pdb
+C:\Users\khaia\source\repos\AnimatedPortrait\AnimatedPortrait\obj\Debug\AnimatedPortrait.csprojAssemblyReference.cache

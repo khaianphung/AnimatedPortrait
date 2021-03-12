@@ -28,29 +28,17 @@ namespace AnimatedPortrait
             Rectangle appRect;
             GetWindowRect(GetForegroundWindow(), out appRect);
             //Rectangle appRect = getActiveWindowBounds();
-            this.Size = new Size(appRect.Width, appRect.Height);
+            this.Size = new Size(appRect.Width, appRect.Height*2/3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Opacity = 0.99;
             this.TopMost = true;
-
-
             this.BackColor = Color.LimeGreen;
             this.TransparencyKey = Color.LimeGreen;
             this.BackgroundImageLayout = ImageLayout.Center;
-
-
-
-
-
-
             pictureBox1.BackColor = Color.Transparent;
-            pictureBox1.Location = new Point((this.Width - pictureBox1.Width) / 2, (this.Height - pictureBox1.Height) / 2);
+            pictureBox1.Location = new Point((this.Width - pictureBox1.Width) / 2, (this.Height - pictureBox1.Height) *2/3);
             pictureBox1.Size = new Size(1, 1);
-
             pictureBox1.SizeMode = PictureBoxSizeMode.AutoSize;
-
-
-
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -114,15 +102,20 @@ namespace AnimatedPortrait
             {
                 emotion = "sad";
             }
-            else if (Game1.currentSpeaker.CurrentDialogue.Peek().CurrentEmotion == "$custom")
+            else if (Game1.currentSpeaker.CurrentDialogue.Peek().CurrentEmotion == "$u")
             {
-                emotion = "custom";
+                emotion = "unique";
+            }
+            else if (Game1.currentSpeaker.CurrentDialogue.Peek().CurrentEmotion == "$l")
+            {
+                emotion = "love";
             }
             else if (Game1.currentSpeaker.CurrentDialogue.Peek().CurrentEmotion == "$a")
             {
                 emotion = "angry";
             }
-
+        
+               
             if (characterName == ("Abigail"))
             {
 
@@ -139,18 +132,21 @@ namespace AnimatedPortrait
                 {
                     pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Abigail\sad.gif");
                 }
-                if (emotion == ("custom"))
+                if (emotion == ("unique"))
                 {
-                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Abigail\custom.gif");
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Abigail\unique.gif");
                 }
-                if (emotion == ("blush"))
+                if (emotion == ("love"))
                 {
-                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Abigail\blush.gif");
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Abigail\love.gif");
                 }
                 if (emotion == ("angry"))
                 {
                     pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Abigail\angry.gif");
                 }
+
+
+
             }
             else if (characterName == ("Alex"))
             {
@@ -167,13 +163,13 @@ namespace AnimatedPortrait
                 {
                     pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Alex\sad.gif");
                 }
-                if (emotion == ("custom"))
+                if (emotion == ("unique"))
                 {
-                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Alex\custom.gif");
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Alex\unique.gif");
                 }
-                if (emotion == ("blush"))
+                if (emotion == ("love"))
                 {
-                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Alex\blush.gif");
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Alex\love.gif");
                 }
                 if (emotion == ("angry"))
                 {
@@ -195,13 +191,13 @@ namespace AnimatedPortrait
                 {
                     pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Caroline\sad.gif");
                 }
-                if (emotion == ("custom"))
+                if (emotion == ("unique"))
                 {
-                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Caroline\custom.gif");
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Caroline\unique.gif");
                 }
-                if (emotion == ("blush"))
+                if (emotion == ("love"))
                 {
-                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Caroline\blush.gif");
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Caroline\love.gif");
                 }
                 if (emotion == ("angry"))
                 {
@@ -223,13 +219,13 @@ namespace AnimatedPortrait
                 {
                     pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Clint\sad.gif");
                 }
-                if (emotion == ("custom"))
+                if (emotion == ("unique"))
                 {
-                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Clint\custom.gif");
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Clint\unique.gif");
                 }
-                if (emotion == ("blush"))
+                if (emotion == ("love"))
                 {
-                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Clint\blush.gif");
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Clint\love.gif");
                 }
                 if (emotion == ("angry"))
                 {
@@ -251,13 +247,13 @@ namespace AnimatedPortrait
                 {
                     pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Demetrius\sad.gif");
                 }
-                if (emotion == ("custom"))
+                if (emotion == ("unique"))
                 {
-                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Demetrius\custom.gif");
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Demetrius\unique.gif");
                 }
-                if (emotion == ("blush"))
+                if (emotion == ("love"))
                 {
-                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Demetrius\blush.gif");
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Demetrius\love.gif");
                 }
                 if (emotion == ("angry"))
                 {
@@ -279,13 +275,13 @@ namespace AnimatedPortrait
                 {
                     pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Dwarf\sad.gif");
                 }
-                if (emotion == ("custom"))
+                if (emotion == ("unique"))
                 {
-                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Dwarf\custom.gif");
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Dwarf\unique.gif");
                 }
-                if (emotion == ("blush"))
+                if (emotion == ("love"))
                 {
-                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Dwarf\blush.gif");
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Dwarf\love.gif");
                 }
                 if (emotion == ("angry"))
                 {
@@ -307,13 +303,13 @@ namespace AnimatedPortrait
                 {
                     pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Elliott\sad.gif");
                 }
-                if (emotion == ("custom"))
+                if (emotion == ("unique"))
                 {
-                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Elliott\custom.gif");
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Elliott\unique.gif");
                 }
-                if (emotion == ("blush"))
+                if (emotion == ("love"))
                 {
-                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Elliott\blush.gif");
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Elliott\love.gif");
                 }
                 if (emotion == ("angry"))
                 {
@@ -335,13 +331,13 @@ namespace AnimatedPortrait
                 {
                     pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Emily\sad.gif");
                 }
-                if (emotion == ("custom"))
+                if (emotion == ("unique"))
                 {
-                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Emily\custom.gif");
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Emily\unique.gif");
                 }
-                if (emotion == ("blush"))
+                if (emotion == ("love"))
                 {
-                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Emily\blush.gif");
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Emily\love.gif");
                 }
                 if (emotion == ("angry"))
                 {
@@ -363,13 +359,13 @@ namespace AnimatedPortrait
                 {
                     pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Evelyn\sad.gif");
                 }
-                if (emotion == ("custom"))
+                if (emotion == ("unique"))
                 {
-                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Evelyn\custom.gif");
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Evelyn\unique.gif");
                 }
-                if (emotion == ("blush"))
+                if (emotion == ("love"))
                 {
-                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Evelyn\blush.gif");
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Evelyn\love.gif");
                 }
                 if (emotion == ("angry"))
                 {
@@ -391,13 +387,13 @@ namespace AnimatedPortrait
                 {
                     pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\George\sad.gif");
                 }
-                if (emotion == ("custom"))
+                if (emotion == ("unique"))
                 {
-                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\George\custom.gif");
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\George\unique.gif");
                 }
-                if (emotion == ("blush"))
+                if (emotion == ("love"))
                 {
-                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\George\blush.gif");
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\George\love.gif");
                 }
                 if (emotion == ("angry"))
                 {
@@ -419,13 +415,13 @@ namespace AnimatedPortrait
                 {
                     pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Gunther\sad.gif");
                 }
-                if (emotion == ("custom"))
+                if (emotion == ("unique"))
                 {
-                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Gunther\custom.gif");
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Gunther\unique.gif");
                 }
-                if (emotion == ("blush"))
+                if (emotion == ("love"))
                 {
-                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Gunther\blush.gif");
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Gunther\love.gif");
                 }
                 if (emotion == ("angry"))
                 {
@@ -447,13 +443,13 @@ namespace AnimatedPortrait
                 {
                     pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Gus\sad.gif");
                 }
-                if (emotion == ("custom"))
+                if (emotion == ("unique"))
                 {
-                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Gus\custom.gif");
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Gus\unique.gif");
                 }
-                if (emotion == ("blush"))
+                if (emotion == ("love"))
                 {
-                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Gus\blush.gif");
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Gus\love.gif");
                 }
                 if (emotion == ("angry"))
                 {
@@ -475,13 +471,13 @@ namespace AnimatedPortrait
                 {
                     pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Haley\sad.gif");
                 }
-                if (emotion == ("custom"))
+                if (emotion == ("unique"))
                 {
-                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Haley\custom.gif");
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Haley\unique.gif");
                 }
-                if (emotion == ("blush"))
+                if (emotion == ("love"))
                 {
-                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Haley\blush.gif");
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Haley\love.gif");
                 }
                 if (emotion == ("angry"))
                 {
@@ -503,13 +499,13 @@ namespace AnimatedPortrait
                 {
                     pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Harvey\sad.gif");
                 }
-                if (emotion == ("custom"))
+                if (emotion == ("unique"))
                 {
-                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Harvey\custom.gif");
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Harvey\unique.gif");
                 }
-                if (emotion == ("blush"))
+                if (emotion == ("love"))
                 {
-                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Harvey\blush.gif");
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Harvey\love.gif");
                 }
                 if (emotion == ("angry"))
                 {
@@ -531,13 +527,13 @@ namespace AnimatedPortrait
                 {
                     pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Jas\sad.gif");
                 }
-                if (emotion == ("custom"))
+                if (emotion == ("unique"))
                 {
-                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Jas\custom.gif");
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Jas\unique.gif");
                 }
-                if (emotion == ("blush"))
+                if (emotion == ("love"))
                 {
-                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Jas\blush.gif");
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Jas\love.gif");
                 }
                 if (emotion == ("angry"))
                 {
@@ -559,13 +555,13 @@ namespace AnimatedPortrait
                 {
                     pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Jodi\sad.gif");
                 }
-                if (emotion == ("custom"))
+                if (emotion == ("unique"))
                 {
-                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Jodi\custom.gif");
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Jodi\unique.gif");
                 }
-                if (emotion == ("blush"))
+                if (emotion == ("love"))
                 {
-                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Jodi\blush.gif");
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Jodi\love.gif");
                 }
                 if (emotion == ("angry"))
                 {
@@ -587,13 +583,13 @@ namespace AnimatedPortrait
                 {
                     pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Kent\sad.gif");
                 }
-                if (emotion == ("custom"))
+                if (emotion == ("unique"))
                 {
-                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Kent\custom.gif");
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Kent\unique.gif");
                 }
-                if (emotion == ("blush"))
+                if (emotion == ("love"))
                 {
-                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Kent\blush.gif");
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Kent\love.gif");
                 }
                 if (emotion == ("angry"))
                 {
@@ -615,13 +611,13 @@ namespace AnimatedPortrait
                 {
                     pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Leah\sad.gif");
                 }
-                if (emotion == ("custom"))
+                if (emotion == ("unique"))
                 {
-                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Leah\custom.gif");
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Leah\unique.gif");
                 }
-                if (emotion == ("blush"))
+                if (emotion == ("love"))
                 {
-                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Leah\blush.gif");
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Leah\love.gif");
                 }
                 if (emotion == ("angry"))
                 {
@@ -643,13 +639,13 @@ namespace AnimatedPortrait
                 {
                     pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Lewis\sad.gif");
                 }
-                if (emotion == ("custom"))
+                if (emotion == ("unique"))
                 {
-                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Lewis\custom.gif");
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Lewis\unique.gif");
                 }
-                if (emotion == ("blush"))
+                if (emotion == ("love"))
                 {
-                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Lewis\blush.gif");
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Lewis\love.gif");
                 }
                 if (emotion == ("angry"))
                 {
@@ -671,13 +667,13 @@ namespace AnimatedPortrait
                 {
                     pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Linus\sad.gif");
                 }
-                if (emotion == ("custom"))
+                if (emotion == ("unique"))
                 {
-                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Linus\custom.gif");
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Linus\unique.gif");
                 }
-                if (emotion == ("blush"))
+                if (emotion == ("love"))
                 {
-                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Linus\blush.gif");
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Linus\love.gif");
                 }
                 if (emotion == ("angry"))
                 {
@@ -699,13 +695,13 @@ namespace AnimatedPortrait
                 {
                     pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Marlon\sad.gif");
                 }
-                if (emotion == ("custom"))
+                if (emotion == ("unique"))
                 {
-                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Marlon\custom.gif");
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Marlon\unique.gif");
                 }
-                if (emotion == ("blush"))
+                if (emotion == ("love"))
                 {
-                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Marlon\blush.gif");
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Marlon\love.gif");
                 }
                 if (emotion == ("angry"))
                 {
@@ -727,13 +723,13 @@ namespace AnimatedPortrait
                 {
                     pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Marnie\sad.gif");
                 }
-                if (emotion == ("custom"))
+                if (emotion == ("unique"))
                 {
-                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Marnie\custom.gif");
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Marnie\unique.gif");
                 }
-                if (emotion == ("blush"))
+                if (emotion == ("love"))
                 {
-                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Marnie\blush.gif");
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Marnie\love.gif");
                 }
                 if (emotion == ("angry"))
                 {
@@ -755,13 +751,13 @@ namespace AnimatedPortrait
                 {
                     pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Maru\sad.gif");
                 }
-                if (emotion == ("custom"))
+                if (emotion == ("unique"))
                 {
-                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Maru\custom.gif");
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Maru\unique.gif");
                 }
-                if (emotion == ("blush"))
+                if (emotion == ("love"))
                 {
-                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Maru\blush.gif");
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Maru\love.gif");
                 }
                 if (emotion == ("angry"))
                 {
@@ -783,13 +779,13 @@ namespace AnimatedPortrait
                 {
                     pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Morris\sad.gif");
                 }
-                if (emotion == ("custom"))
+                if (emotion == ("unique"))
                 {
-                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Morris\custom.gif");
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Morris\unique.gif");
                 }
-                if (emotion == ("blush"))
+                if (emotion == ("love"))
                 {
-                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Morris\blush.gif");
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Morris\love.gif");
                 }
                 if (emotion == ("angry"))
                 {
@@ -811,13 +807,13 @@ namespace AnimatedPortrait
                 {
                     pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Pam\sad.gif");
                 }
-                if (emotion == ("custom"))
+                if (emotion == ("unique"))
                 {
-                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Pam\custom.gif");
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Pam\unique.gif");
                 }
-                if (emotion == ("blush"))
+                if (emotion == ("love"))
                 {
-                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Pam\blush.gif");
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Pam\love.gif");
                 }
                 if (emotion == ("angry"))
                 {
@@ -839,13 +835,13 @@ namespace AnimatedPortrait
                 {
                     pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Penny\sad.gif");
                 }
-                if (emotion == ("custom"))
+                if (emotion == ("unique"))
                 {
-                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Penny\custom.gif");
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Penny\unique.gif");
                 }
-                if (emotion == ("blush"))
+                if (emotion == ("love"))
                 {
-                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Penny\blush.gif");
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Penny\love.gif");
                 }
                 if (emotion == ("angry"))
                 {
@@ -867,13 +863,13 @@ namespace AnimatedPortrait
                 {
                     pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Pierre\sad.gif");
                 }
-                if (emotion == ("custom"))
+                if (emotion == ("unique"))
                 {
-                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Pierre\custom.gif");
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Pierre\unique.gif");
                 }
-                if (emotion == ("blush"))
+                if (emotion == ("love"))
                 {
-                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Pierre\blush.gif");
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Pierre\love.gif");
                 }
                 if (emotion == ("angry"))
                 {
@@ -895,13 +891,13 @@ namespace AnimatedPortrait
                 {
                     pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Robin\sad.gif");
                 }
-                if (emotion == ("custom"))
+                if (emotion == ("unique"))
                 {
-                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Robin\custom.gif");
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Robin\unique.gif");
                 }
-                if (emotion == ("blush"))
+                if (emotion == ("love"))
                 {
-                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Robin\blush.gif");
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Robin\love.gif");
                 }
                 if (emotion == ("angry"))
                 {
@@ -923,13 +919,13 @@ namespace AnimatedPortrait
                 {
                     pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Sam\sad.gif");
                 }
-                if (emotion == ("custom"))
+                if (emotion == ("unique"))
                 {
-                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Sam\custom.gif");
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Sam\unique.gif");
                 }
-                if (emotion == ("blush"))
+                if (emotion == ("love"))
                 {
-                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Sam\blush.gif");
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Sam\love.gif");
                 }
                 if (emotion == ("angry"))
                 {
@@ -951,13 +947,13 @@ namespace AnimatedPortrait
                 {
                     pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Sandy\sad.gif");
                 }
-                if (emotion == ("custom"))
+                if (emotion == ("unique"))
                 {
-                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Sandy\custom.gif");
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Sandy\unique.gif");
                 }
-                if (emotion == ("blush"))
+                if (emotion == ("love"))
                 {
-                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Sandy\blush.gif");
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Sandy\love.gif");
                 }
                 if (emotion == ("angry"))
                 {
@@ -979,13 +975,13 @@ namespace AnimatedPortrait
                 {
                     pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Shane\sad.gif");
                 }
-                if (emotion == ("custom"))
+                if (emotion == ("unique"))
                 {
-                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Shane\custom.gif");
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Shane\unique.gif");
                 }
-                if (emotion == ("blush"))
+                if (emotion == ("love"))
                 {
-                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Shane\blush.gif");
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Shane\love.gif");
                 }
                 if (emotion == ("angry"))
                 {
@@ -1007,13 +1003,13 @@ namespace AnimatedPortrait
                 {
                     pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Sebastian\sad.gif");
                 }
-                if (emotion == ("custom"))
+                if (emotion == ("unique"))
                 {
-                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Sebastian\custom.gif");
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Sebastian\unique.gif");
                 }
-                if (emotion == ("blush"))
+                if (emotion == ("love"))
                 {
-                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Sebastian\blush.gif");
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Sebastian\love.gif");
                 }
                 if (emotion == ("angry"))
                 {
@@ -1035,13 +1031,13 @@ namespace AnimatedPortrait
                 {
                     pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Vincent\sad.gif");
                 }
-                if (emotion == ("custom"))
+                if (emotion == ("unique"))
                 {
-                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Vincent\custom.gif");
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Vincent\unique.gif");
                 }
-                if (emotion == ("blush"))
+                if (emotion == ("love"))
                 {
-                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Vincent\blush.gif");
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Vincent\love.gif");
                 }
                 if (emotion == ("angry"))
                 {
@@ -1063,13 +1059,13 @@ namespace AnimatedPortrait
                 {
                     pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Willy\sad.gif");
                 }
-                if (emotion == ("custom"))
+                if (emotion == ("unique"))
                 {
-                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Willy\custom.gif");
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Willy\unique.gif");
                 }
-                if (emotion == ("blush"))
+                if (emotion == ("love"))
                 {
-                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Willy\blush.gif");
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Willy\love.gif");
                 }
                 if (emotion == ("angry"))
                 {
@@ -1091,13 +1087,13 @@ namespace AnimatedPortrait
                 {
                     pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Wizard\sad.gif");
                 }
-                if (emotion == ("custom"))
+                if (emotion == ("unique"))
                 {
-                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Wizard\custom.gif");
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Wizard\unique.gif");
                 }
-                if (emotion == ("blush"))
+                if (emotion == ("love"))
                 {
-                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Wizard\blush.gif");
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Wizard\love.gif");
                 }
                 if (emotion == ("angry"))
                 {
@@ -1105,6 +1101,7 @@ namespace AnimatedPortrait
                 }
             }
             pictureBox1.Location = new Point((this.Width - pictureBox1.Image.Width) / 2, (this.Height - pictureBox1.Image.Height) / 2);
+            
         }
 
 
