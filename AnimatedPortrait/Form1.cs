@@ -1771,6 +1771,11 @@ namespace AnimatedPortrait
                     pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Wizard\angry.gif");
                 }
             }
+
+            int zoomFactor = 2;
+            Size newSize = new Size((int)(pictureBox1.Image.Width * zoomFactor), (int)(pictureBox1.Image.Height * zoomFactor));
+            Bitmap bmp = new Bitmap(pictureBox1.Image, newSize);
+
             pictureBox1.Location = new Point((this.Width - pictureBox1.Image.Width) / 2, (this.Height - pictureBox1.Image.Height) / 2);
             
         }
