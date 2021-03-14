@@ -17,6 +17,7 @@ namespace AnimatedPortrait
     {
         Form1 f1;
         bool running = true;
+        string previousEmotion;
         /*********
         ** Public methods
         *********/
@@ -52,8 +53,9 @@ namespace AnimatedPortrait
                 return;
             if (Game1.dialogueUp && Game1.currentSpeaker != null)
             {
+                string currentEmotion = Game1.currentSpeaker.CurrentDialogue.Peek().CurrentEmotion;
                 this.Monitor.Log($"{Game1.currentSpeaker.Name} {Game1.currentSpeaker.CurrentDialogue.Peek().CurrentEmotion}.", LogLevel.Debug);
-                if (running == true)
+                if (running == true && currentEmotion != previousEmotion)
                 {
                     if (f1.IsDisposed)
                     {
