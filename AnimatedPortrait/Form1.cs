@@ -1211,6 +1211,68 @@ namespace AnimatedPortrait
                     pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Maru\9.gif");
                 }
             }
+
+            else if (characterName == ("Maru_Hospital"))
+            {
+                if (emotion == ("neutral"))
+                {
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Maru_Hospital\neutral.gif");
+
+                }
+                if (emotion == ("happy"))
+                {
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Maru_Hospital\happy.gif");
+                }
+                if (emotion == ("sad"))
+                {
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Maru_Hospital\sad.gif");
+                }
+                if (emotion == ("unique"))
+                {
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Maru_Hospital\unique.gif");
+                }
+
+                if (emotion == ("3"))
+                {
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Maru_Hospital\3.gif");
+                }
+                if (emotion == ("love"))
+                {
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Maru_Hospital\love.gif");
+                }
+
+                if (emotion == ("4"))
+                {
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Maru_Hospital\4.gif");
+                }
+                if (emotion == ("angry"))
+                {
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Maru_Hospital\angry.gif");
+                }
+
+                if (emotion == ("5"))
+                {
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Maru_Hospital\5.gif");
+                }
+
+
+                if (emotion == ("6"))
+                {
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Maru_Hospital\6.gif");
+                }
+                if (emotion == ("7"))
+                {
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Maru_Hospital\7.gif");
+                }
+                if (emotion == ("8"))
+                {
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Maru_Hospital\8.gif");
+                }
+                if (emotion == ("9"))
+                {
+                    pictureBox1.Image = Image.FromFile(path + @"\Mods\AnimatedPortrait\assets\Pics\Maru_Hospital\9.gif");
+                }
+            }
             else if (characterName == ("Morris"))
             {
                 if (emotion == ("neutral"))
@@ -1776,7 +1838,7 @@ namespace AnimatedPortrait
             Size newSize = new Size((int)(pictureBox1.Image.Width * zoomFactor), (int)(pictureBox1.Image.Height * zoomFactor));
             Bitmap bmp = new Bitmap(pictureBox1.Image, newSize);
 
-            pictureBox1.Location = new Point((this.Width - pictureBox1.Image.Width) / 2, (this.Height - pictureBox1.Image.Height) / 2);
+            pictureBox1.Location = new Point((this.Width - pictureBox1.Image.Width) / 2, (this.Height - pictureBox1.Image.Height) *2/5);
             
         }
 
